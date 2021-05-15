@@ -1,0 +1,439 @@
+
+$assetPath: "/wp-content/uploads"
+$gris: #808080
+$gisOscuro: #1f1f1f
+$naranja: #C56113 
+$fontFamily: "Gotham", Sans-serif
+
+* 
+    outline: none !important
+    &:hover, &:active, &:focus   
+        outline: none !important
+
+.n2-ss-control-bullet-vertical
+    &::after
+        content: ''
+        width: 2px
+        height: 150px
+        background-color: #676767
+        position: absolute
+        visibility: visible
+        left: 5px
+        top: -19px
+        z-index: -1
+
+.elementor-social-icon-spotify
+    i.fab 
+        font-size: 25px
+
+.MLP
+    &__reproductor
+        display: none
+        opacity: 0
+        transition: 3s all
+        &.active 
+            display: block
+            opacity: 1
+            transition: 3s all
+
+    &__header
+        &.elementor-sticky--effects
+            background-color: rgba(255,255,255,.9)
+            .MLP
+                &__menu 
+                    .elementor-item
+                        color: $gisOscuro !important
+                    .eicon-menu-bar
+                        color: $naranja !important
+                &__logo
+                    img 
+                        width: 120px !important
+
+    &__aliados
+        .swiper-slide-image
+            filter: grayscale(100%)
+            &:hover 
+                filter: grayscale(0%)
+                transition: 0.3s all
+    &__text-stroke-v1
+        .elementor-heading-title
+            -webkit-text-stroke: 1px #fff
+    &__text-stroke-v2
+        .elementor-heading-title
+            -webkit-text-stroke: 1px #d7d7d7
+    &__contact
+        .elementor-field-type-acceptance
+            label
+                a 
+                    color: $gisOscuro !important
+                    text-decoration: underline !important
+
+        .elementor-field-type-submit
+            width: auto !important
+            margin: 20px auto 0
+
+    &__referentes
+        .elementor-tab-title
+            background-color: #CCC
+            border-radius: 18px
+            padding: 5px 35px 8px !important
+            margin: 0 10px
+            span 
+                font-size: 22px
+                transform: rotate(40deg)
+                display: inline-block
+                color: $naranja
+            &.elementor-active
+                background-color: $naranja !important
+                span 
+                    color: #fff !important
+    &__slide-referentes
+        width: 65%
+        margin: 25px auto
+
+
+    // Blog
+    &__blog-grid
+        display: flex
+        flex-wrap: wrap
+    &__wrap_post
+        width: calc(33.333% - 20px) 
+        margin: 0 10px 20px
+        background-size: cover
+        background-position: center 
+        min-height: 300px
+
+
+    &__post-content-wrap 
+        padding: 25px
+        height: 100%
+        background-color: rgba(213, 213, 213, 0.8)
+    &__post-title
+        a 
+            color: $naranja
+            font-family: $fontFamily
+            text-transform: uppercase
+            font-weight: 900
+            &:hover 
+                color: $gisOscuro
+    &__read-more
+        color: $naranja
+        font-weight: 900
+        border-bottom: 1px solid $naranja
+        img 
+            width: 16px
+            margin-left: 8px
+        &:hover 
+            color: $naranja
+
+    // Slide servicios
+    &__widget-slide-servicios
+        // &::before
+        //     content: ''
+        //     position: absolute
+        //     left: -240px
+        //     top: 60px
+        //     width: 250px
+        //     height: 250px
+        //     background-image: url('#{$assetPath}/ico01.png')
+        //     z-index: 2
+        //     background-size: contain
+        //     background-repeat: no-repeat
+        // &::after
+        //     content: ''
+        //     position: absolute
+        //     right: -180px
+        //     bottom: -80px
+        //     width: 200px
+        //     height: 250px
+        //     background-image: url('#{$assetPath}/ico02.png')
+        //     z-index: 2
+        //     background-size: contain
+        //     background-repeat: no-repeat
+
+    &__slide-servicios
+        cursor: url('#{$assetPath}/cursor.png'), auto
+        &--wrap-item
+            background-color: #fff
+            border-radius: 30px
+            padding: 25px 30px
+            text-align: center
+            height: auto !important
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            align-items: center
+        &--main_title 
+            color: $naranja
+            text-transform: uppercase
+            font-family: $fontFamily
+            line-height: 0.9em
+            position: relative
+            a
+                color: $naranja 
+                &:hover 
+                    color: $gisOscuro
+        &--subtitle
+            color: #fff
+            -webkit-text-stroke: 1px #1F1F1F
+            position: absolute
+            right: 0
+            left: 0
+            top: -18px
+        &--icon
+            width: 110px
+            margin-bottom: 20px
+            &:hover 
+                transform: scale(0.8)
+                transition: 1s all
+        &--detail
+            font-family: $fontFamily
+            font-size: 14px
+            ul, ol 
+                list-style-type: none 
+                padding: 0
+        &--button
+            color: $naranja
+            font-weight: 900
+            border-bottom: 1px solid $naranja
+            margin-top: 20px
+            display: inline-block !important
+            &:hover 
+                opacity: 0.8
+                color: $naranja
+            img 
+                width: 16px
+                margin-left: 8px
+
+    // Detalle servicios
+    &__tab-servicios
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        align-items: center
+        width: 100%
+        &--col-izq,
+        &--col-der
+            width: calc(25% - 20px)
+            margin: 0 10px
+        &--col-middle
+            width: calc(50% - 20px)
+            margin: 0 10px
+            position: relative
+        &-button
+            background-color: #CCCCCC
+            border-radius: 8px
+            margin: 0 0 20px
+            padding: 10px 20px
+            display: flex
+            align-items: center
+            cursor: pointer
+            .label 
+                font-family: $fontFamily
+                font-weight: 500
+                font-size: 17px
+                line-height: 1em
+                display: block
+                
+            .diamond 
+                width: 10px
+                height: 10px
+                background-color: $naranja
+                display: inline-block
+                transform: rotate(45deg)
+                margin-right: 15px
+            &:hover 
+                background-color: $naranja
+                color: #fff
+                .diamond
+                    background-color: #fff
+        & .image-etiquetas
+            position: absolute
+            right: 0
+            left: 0
+            opacity: 0
+            transition: 0.5s all
+            margin: 10px auto 20px
+            &:first-child
+                position: relative
+                opacity: 1
+                transition: 0.5s all
+            &.active
+                opacity: 1
+                transition: 0.5s all
+
+#slide-servicios
+    padding-bottom: 45px            
+    .swiper-pagination-bullet
+        width: 10px !important 
+        height: 10px !important 
+        background: $naranja !important
+
+
+.pattern-blog-v1
+    .MLP
+        &__blog-grid
+            &::before
+                content: ''
+                width: 120px
+                height: 185px
+                background-image: url('#{$assetPath}/patter01.png')
+                position: absolute
+                left: -140px
+                bottom: -90px
+                background-size: contain
+                background-repeat: no-repeat
+                z-index: -1
+            &::after
+                content: ''
+                width: 140px
+                height: 185px
+                background-image: url('#{$assetPath}/pattern02.png')
+                position: absolute
+                right: -100px
+                top: -100px
+                background-size: contain
+                background-repeat: no-repeat    
+                z-index: -1   
+
+
+.lightSlider 
+    height: auto !important   
+
+
+
+// Responsive
+   
+@media (max-width: 1325px)  
+    .pattern-blog-v1 
+        .MLP
+            &__blog-grid
+                &::after
+                    right: -30px
+
+
+@media (max-width: 1300px)
+    .MLP__widget-slide-servicios
+        &::before,
+        &::after
+            display: none
+
+
+@media (max-width: 1185px)
+    .pattern-blog-v1 
+        .MLP
+            &__blog-grid
+                &::after,
+                &::before 
+                    display: none
+
+
+@media (max-width: 1024px)
+    .MLP__header
+        &.elementor-sticky--effects 
+            .MLP__logo
+                img
+                    width: 85px !important
+
+
+@media (max-width: 902px)
+    .MLP
+        &__referentes 
+            .elementor-tab-title
+                margin: 0 5px
+
+@media (max-width: 900px)
+    .MLP
+        &__tab-servicios
+            &--col-izq,
+            &--col-der
+                width: calc(50% - 20px)
+            &--col-middle
+                width: calc(100% - 20px)
+                order: 3
+            .image-etiquetas
+                width: 50%
+                &:first-child
+                    margin-left: 25%
+
+
+@media (max-width: 862px)
+    .MLP
+        &__referentes 
+            .elementor-tab-title
+                padding: 5px 25px !important
+
+
+@media (max-width: 782px)
+    .MLP
+        &__referentes 
+            .elementor-tabs-wrapper
+                align-items: center
+            .elementor-tab-title
+                padding: 5px 15px !important
+                flex: 1
+                text-align: center
+                
+
+
+@media (max-width: 767px)
+    .MLP
+        &__header
+            &.elementor-sticky--effects 
+                .MLP__logo
+                    img
+                        width: 60px !important    
+        &__wrap_post
+            width: calc(50% - 20px)
+            min-height: 265px
+
+        &__slide-servicios
+            &--icon
+                width: 85px
+                margin-bottom: 10px
+
+        &__referentes 
+            .elementor-tab-mobile-title
+                margin-bottom: 15px
+                &.elementor-active
+                    margin-bottom: 0px
+
+
+@media (max-width: 729px)
+    .n2-ss-slide-background-image
+        background-position: center bottom !important
+    .txt-banner
+        width: 80% !important 
+        margin: auto !important
+
+
+@media (max-width: 670px)
+    .MLP__slide-referentes 
+        width: 100%
+        margin: 0px
+
+@media (max-width: 560px)
+    .MLP 
+        &__wrap_post
+            width: calc(100% - 20px)
+            min-height: auto
+
+
+@media (max-width: 425px)
+    .MLP
+        &__tab-servicios
+            &--col-izq
+                width: calc(100% - 20px)
+                order: 1
+            &--col-der
+                width: calc(100% - 20px)
+                order: 3
+            &--col-middle
+                width: calc(100% - 20px)
+                order: 2
+            
+        &__referentes
+            .elementor-tab-title
+                span 
+                    font-size: 15px
+                    margin-right: 10px
